@@ -83,5 +83,5 @@ class gita_arti extends StatelessWidget {
 }
 Text text(String?name)
 {
-  return Text(name!,style: TextStyle(fontSize: 16),);
+  return Text(name!,style: TextStyle(fontSize: 17),);
 }

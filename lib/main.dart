@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shree_gita/view/screen/homescreen.dart';
 import 'package:shree_gita/view/screen/secondscreen/bhagvatgita.dart';
 import 'package:shree_gita/view/screen/secondscreen/gita_arti.dart';
+import 'package:shree_gita/view/screen/secondscreen/gita_mahatmya.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/':(context) => homescreen(),
         '/adhyay':(context) => adhyay(),
         '/arti':(context)=>gita_arti(),
+        '/mahatmya':(context)=>gita_mahatmay(),
       },
     );
   }

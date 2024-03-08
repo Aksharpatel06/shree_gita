@@ -103,25 +103,30 @@ class _homescreenState extends State<homescreen> {
                           ),
                         ),
                         SizedBox(height: height*0.02,),
-                        Container(
-                          height: height*0.12,
-                          width: width*0.8,
-                          decoration: BoxDecoration(
-                            color: Color(0xfffbb624),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15.0),
-                                child: SizedBox(height: height*0.09,
-                                    child: Image.asset('asset/img/img4.png')),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0,left: 20),
-                                child: Text('गीता महात्म्य',style: TextStyle(fontSize: 28),),
-                              ),
-                            ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/mahatmya');
+                          },
+                          child: Container(
+                            height: height*0.12,
+                            width: width*0.8,
+                            decoration: BoxDecoration(
+                              color: Color(0xfffbb624),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15.0),
+                                  child: SizedBox(height: height*0.09,
+                                      child: Image.asset('asset/img/img4.png')),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0,left: 20),
+                                  child: Text('गीता महात्म्य',style: TextStyle(fontSize: 28),),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(height: height*0.02,),
