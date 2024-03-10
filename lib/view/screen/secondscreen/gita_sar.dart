@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../utils/adhayaylist.dart';
+
 class gitta_saar extends StatefulWidget {
   const gitta_saar({super.key});
 
@@ -19,12 +21,13 @@ class _gitta_saarState extends State<gitta_saar> {
           'श्रीमद भगवत गीता',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
+        automaticallyImplyLeading: false,
       ),
       body: Container(
         color: const Color(0xfffae0af),
         child: Stack(children: [
           Expanded(
-            child: Column(
+            child: Stack(
               children: [
                 Container(
                   height: height * 0.35,
@@ -45,7 +48,7 @@ class _gitta_saarState extends State<gitta_saar> {
                 ),
                 Container(
                   height: height * 0.24,
-                  width: width*0.85,
+                  width: width * 0.85,
                   decoration: BoxDecoration(
                       color: Color(0xfff8ca67),
                       // color: Colors.black,
@@ -77,6 +80,11 @@ class _gitta_saarState extends State<gitta_saar> {
                         topLeft: Radius.circular(15),
                         topRight: Radius.circular(15)),
                   ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: List.generate(adhayaylist.length, (index) => saar(index,context)),
+                    ),
+                  )
                 )
               ],
             ),
@@ -85,4 +93,43 @@ class _gitta_saarState extends State<gitta_saar> {
       ),
     );
   }
+  Widget saar(int? index,BuildContext context)
+  {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xfffbb624),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 12.0,bottom: 4),
+              child: Text(adhayaylist[index!]['name1'],style: TextStyle(fontSize: 12)),
+            ),
+            SizedBox(height: height*0.001,),
+            Text(adhayaylist[index!]['name'],style: TextStyle(fontSize: 20),),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Text(adhayaylist[index!]['saar'],textAlign: TextAlign.center,style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
+            ),
+            Container(
+              height: height*0.01,
+              width: width*0.95,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+              ),
+            ),
+            SizedBox(height: height*0.0005,)
+          ],
+        ),
+      ),
+    );
+  }
 }
+

@@ -15,12 +15,13 @@ class gita_arti extends StatelessWidget {
           'श्रीमद भगवत गीता',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
+        automaticallyImplyLeading: false,
       ),
       body: Container(
         color: Color(0xfffae0af),
         child: Stack(children: [
           Expanded(
-            child: Column(
+            child: Stack(
               children: [
                 Container(
                   height: height * 0.35,
