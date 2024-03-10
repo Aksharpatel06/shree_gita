@@ -11,24 +11,45 @@ class gita_mahatmay extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text(
+        title: const Text(
           'श्रीमद भगवत गीता',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
       body: Container(
-        color: Color(0xfffae0af),
+        color: const Color(0xfffae0af),
         child: Stack(children: [
           Expanded(
             child: Column(
               children: [
                 Container(
                   height: height * 0.35,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Color(0xfffbb010),
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.elliptical(200, 30),
                           bottomRight: Radius.elliptical(200, 30))),
+                ),
+                Container(
+                  height: height * 0.28,
+                  decoration: BoxDecoration(
+                      color: Color(0xfffbbb37),
+                      // color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.elliptical(50, 5),
+                          bottomRight: Radius.elliptical(300, 100))),
+                ),
+                Container(
+                  height: height * 0.24,
+                  width: width*0.85,
+                  decoration: BoxDecoration(
+                      color: Color(0xfff8ca67),
+                      // color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.elliptical(200, 10),
+                        bottomRight: Radius.elliptical(1000, 600),
+                        // topRight: Radius.elliptical(50, 90)
+                      )),
                 ),
               ],
             ),
@@ -46,7 +67,7 @@ class gita_mahatmay extends StatelessWidget {
                 Container(
                   height: height * 0.6155,
                   width: width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(15),
@@ -56,7 +77,7 @@ class gita_mahatmay extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xfffbb624),
+                        color: const Color(0xfffbb624),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: SingleChildScrollView(
@@ -64,7 +85,7 @@ class gita_mahatmay extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(height: height*0.02,),
-                            Text('गीता माहात्म्य',style: TextStyle(fontSize: 21),),
+                            const Text('गीता माहात्म्य',style: TextStyle(fontSize: 21),),
                             SizedBox(height: height*0.02,),
                             Container(
                               alignment: Alignment.center,
@@ -74,7 +95,6 @@ class gita_mahatmay extends StatelessWidget {
                                 children: List.generate(mahatmay.length, (index) => text(mahatmay[index])),
                               ),
                             ),
-                            // ...List.generate(mahatmay.length, (index) => text(mahatmay[index])),
                             SizedBox(height: height*0.02,),
                           ],
                         ),
@@ -92,5 +112,5 @@ class gita_mahatmay extends StatelessWidget {
 }
 Text text(String?name)
 {
-  return Text(name!,textAlign: TextAlign.center,overflow: TextOverflow.clip,style: TextStyle(fontSize: 20),);
+  return Text(name!,textAlign: TextAlign.center,overflow: TextOverflow.clip,style: const TextStyle(fontSize: 20),);
 }
