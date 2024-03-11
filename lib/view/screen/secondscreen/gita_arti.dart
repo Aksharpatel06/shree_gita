@@ -53,33 +53,34 @@ class gita_arti extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Column(
-              children: [
-                SizedBox(
-                    height: height * 0.2,
-                    child: Image.asset('asset/img/logo.png')),
-                SizedBox(
-                  height: height * 0.04,
-                ),
-                Container(
-                  height: height * 0.6155,
-                  width: width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15)),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Column(
+                children: [
+                  SizedBox(
+                      height: height * 0.2,
+                      child: Image.asset('asset/img/logo.png')),
+                  SizedBox(
+                    height: height * 0.04,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xfffbb624),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: SingleChildScrollView(
+                  Container(
+                    // height: height * 0.6155,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xfffbb624),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                         child: Column(
                           children: [
                             SizedBox(height: height*0.02,),
@@ -91,9 +92,9 @@ class gita_arti extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ]),

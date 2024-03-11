@@ -59,32 +59,35 @@ class _gitta_saarState extends State<gitta_saar> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Column(
-              children: [
-                SizedBox(
-                    height: height * 0.2,
-                    child: Image.asset('asset/img/logo.png')),
-                SizedBox(
-                  height: height * 0.04,
-                ),
-                Container(
-                  height: height * 0.6155,
-                  width: width,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15)),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Column(
+                children: [
+                  SizedBox(
+                      height: height * 0.2,
+                      child: Image.asset('asset/img/logo.png')),
+                  SizedBox(
+                    height: height * 0.04,
                   ),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: List.generate(adhayaylist.length, (index) => saar(index,context)),
+                  Container(
+                    // height: height * 0.6155,
+                    width: width,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15)),
                     ),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: List.generate(adhayaylist.length, (index) => saar(index,context)),
+                      ),
+                    )
                   )
-                )
-              ],
+                ],
+              ),
             ),
           ),
         ]),

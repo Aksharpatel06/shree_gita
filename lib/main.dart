@@ -5,6 +5,7 @@ import 'package:shree_gita/view/screen/secondscreen/bhagvatgita.dart';
 import 'package:shree_gita/view/screen/secondscreen/gita_arti.dart';
 import 'package:shree_gita/view/screen/secondscreen/gita_mahatmya.dart';
 import 'package:shree_gita/view/screen/secondscreen/gita_sar.dart';
+import 'package:shree_gita/view/screen/spleshscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/':(context) => homescreen(),
+        '/':(context) => Spleshscreen(),
+        '/home':(context) => homescreen(),
         '/adhyay':(context) => adhyay(),
         '/arti':(context)=>gita_arti(),
         '/mahatmya':(context)=>gita_mahatmay(),

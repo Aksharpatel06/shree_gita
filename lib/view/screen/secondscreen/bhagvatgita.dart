@@ -60,24 +60,25 @@ class _adhyayState extends State<adhyay> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 19.0, top: 30),
-            child: Column(
-              children: [
-                SizedBox(
-                    height: height * 0.2,
-                    child: Image.asset('asset/img/logo.png')),
-                SizedBox(
-                  height: height * 0.04,
-                ),
-                Container(
-                  height: height * 0.6,
-                  width: width * 0.9,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 19.0, top: 30),
+              child: Column(
+                children: [
+                  SizedBox(
+                      height: height * 0.2,
+                      child: Image.asset('asset/img/logo.png')),
+                  SizedBox(
+                    height: height * 0.04,
                   ),
-                  child: SingleChildScrollView(
+                  Container(
+                    // height: height * 0.6,
+                    width: width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -105,9 +106,9 @@ class _adhyayState extends State<adhyay> {
                         ],
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ]),

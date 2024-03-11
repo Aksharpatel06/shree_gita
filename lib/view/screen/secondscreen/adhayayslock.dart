@@ -63,33 +63,35 @@ class _adhayayslockState extends State<adhayayslock> {
               ),
             ],
           ),
-          Container(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Column(
-                children: [
-                  SizedBox(
-                      height: height * 0.2,
-                      child: Image.asset('asset/img/logo.png')),
-                  SizedBox(
-                    height: height * 0.04,
-                  ),
-                  Container(
-                      height: height * 0.6155,
-                      width: width,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15),
-                            topRight: Radius.circular(15)),
-                      ),
-                      child: SingleChildScrollView(
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Container(
+              // width: width,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Column(
+                  children: [
+                    SizedBox(
+                        height: height * 0.2,
+                        child: Image.asset('asset/img/logo.png')),
+                    SizedBox(
+                      height: height * 0.04,
+                    ),
+                    Container(
+                        // height: height * 0.6155,
+                        width: width,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(15),
+                              topRight: Radius.circular(15)),
+                        ),
                         child: Column(
                           children: List.generate(adhayaylist[adhayayIndex]['chapter'].length, (index) => adhyayslock(index,context,adhayayIndex)),
-                        ),
-                      )
-                  )
-                ],
+                        )
+                    )
+                  ],
+                ),
               ),
             ),
           ),
