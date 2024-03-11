@@ -20,40 +20,38 @@ class gita_mahatmay extends StatelessWidget {
       body: Container(
         color: const Color(0xfffae0af),
         child: Stack(children: [
-          Expanded(
-            child: Stack(
-              children: [
-                Container(
-                  height: height * 0.35,
-                  decoration: const BoxDecoration(
-                      color: Color(0xfffbb010),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.elliptical(200, 30),
-                          bottomRight: Radius.elliptical(200, 30))),
-                ),
-                Container(
-                  height: height * 0.28,
-                  decoration: BoxDecoration(
-                      color: Color(0xfffbbb37),
-                      // color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.elliptical(50, 5),
-                          bottomRight: Radius.elliptical(300, 100))),
-                ),
-                Container(
-                  height: height * 0.24,
-                  width: width*0.85,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff8ca67),
-                      // color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.elliptical(200, 10),
-                        bottomRight: Radius.elliptical(1000, 600),
-                        // topRight: Radius.elliptical(50, 90)
-                      )),
-                ),
-              ],
-            ),
+          Stack(
+            children: [
+              Container(
+                height: height * 0.35,
+                decoration: const BoxDecoration(
+                    color: Color(0xfffbb010),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.elliptical(200, 30),
+                        bottomRight: Radius.elliptical(200, 30))),
+              ),
+              Container(
+                height: height * 0.28,
+                decoration: BoxDecoration(
+                    color: Color(0xfffbbb37),
+                    // color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.elliptical(50, 5),
+                        bottomRight: Radius.elliptical(300, 100))),
+              ),
+              Container(
+                height: height * 0.24,
+                width: width*0.85,
+                decoration: BoxDecoration(
+                    color: Color(0xfff8ca67),
+                    // color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.elliptical(200, 10),
+                      bottomRight: Radius.elliptical(1000, 600),
+                      // topRight: Radius.elliptical(50, 90)
+                    )),
+              ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.only(top: 30),
