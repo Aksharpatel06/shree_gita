@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shree_gita/view/screen/secondscreen/bhagvatgita.dart';
 
 import '../../../utils/adhayaylist.dart';
@@ -149,9 +150,7 @@ class _adhayayslockState extends State<adhayayslock> {
                         ),
                       ),
                     );
-
-                    // Find the ScaffoldMessenger in the widget tree
-                    // and use it to show a SnackBar.
+                     Clipboard.setData(ClipboardData(text:'${adhayaylist[index2]['chapter'][index]['san']}   ${adhayaylist[index2]['chapter'][index]['hindi']}' ));
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
