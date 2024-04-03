@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shree_gita/view/screen/secondscreen/bhagvatgita.dart';
-
+import 'package:share_extend/share_extend.dart';
 import '../../../utils/adhayaylist.dart';
 
 class adhayayslock extends StatefulWidget {
@@ -139,17 +138,6 @@ class _adhayayslockState extends State<adhayayslock> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(onTap: () {
-                      SnackBar(
-                      duration: Duration(seconds: 1),
-                      content: Text(
-                        'Copied!',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    );
                      Clipboard.setData(ClipboardData(text:'${adhayaylist[index2]['chapter'][index]['san']}   ${adhayaylist[index2]['chapter'][index]['hindi']}' ));
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       duration: Duration(seconds: 1),
@@ -163,7 +151,11 @@ class _adhayayslockState extends State<adhayayslock> {
                       ),
                     ));
                   },child: Text('Copy',style: TextStyle(color: Color(0xfffbbb37),fontWeight: FontWeight.w500),)),
-                  Text('Share',style: TextStyle(color: Color(0xfffbbb37),fontWeight: FontWeight.w500),)
+                  InkWell(onTap:() {
+                    setState(() {
+                      ShareExtend.share('${adhayaylist[index2]['chapter'][index]['san']}   ${adhayaylist[index2]['chapter'][index]['hindi']}', 'text');
+                    });
+                  },child: Text('Share',style: TextStyle(color: Color(0xfffbbb37),fontWeight: FontWeight.w500),))
                 ],
               ),
             ),
